@@ -1,7 +1,7 @@
 # discordGoDemo
 これは[discordGo](https://github.com/bwmarrin/discordgo)のテスト用リポジトリです  
-GO言語の勉強と共にDiscord Botで興味のある機能を実装します 
-追加された機能は随時マークダウンに追記します  
+GO言語の勉強と共にDiscord Botで興味のある機能を実装します  
+追加された機能は随時Markdownに追記します  
 どうせ忘れるからMarkdownの書き方の[URL](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)を置いておきます
 
 # Git/Githubについて
