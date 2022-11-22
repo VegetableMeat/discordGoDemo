@@ -32,4 +32,7 @@ go.sum
 # env file
 .env
 
+# toml file
+config.toml
+
 # End of https://www.toptal.com/developers/gitignore/api/go
