@@ -32,10 +32,20 @@ func MessageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
+	ch, err := s.Channel(m.ChannelID)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	// 入力されたコマンドが存在していればそれを実行する
 	content, arg := common.SplitContent(m.Content)
 	for _, path := range Files {
 		if content == config.GetPrefix()+path {
+			if ch.Type != discordgo.ChannelTypeGuildText {
+				s.ChannelMessageSend(m.ChannelID, "ここではコマンドを使用出来ません")
+				return
+			}
 			Funcs[path](s, m, arg)
 		}
 	}
